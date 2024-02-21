@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Passperfect.Data;
 using Passperfect.Models;
+using Passperfect.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +14,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<ApplicationUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IPasswordGenerationService, PasswordGenerationService>();
 
 var app = builder.Build();
 

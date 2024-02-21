@@ -18,14 +18,14 @@
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <textarea asp-for="Input.PgpPublicKey" class="form-control" rows="30" cols="50" autocomplete="new-password" aria-required="true" placeholder="PGP Public Key"></textarea>
+                <label asp-for="Input.PgpPublicKey">PGP Public Key</label>
+                <span asp-validation-for="Input.PgpPublicKey" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                <textarea asp-for="Input.ConfirmPgpPublicKey" class="form-control" autocomplete="new-password" aria-required="true" placeholder="PGP Public Key"></textarea>
+                <label asp-for="Input.ConfirmPgpPublicKey">Confirm Password</label>
+                <span asp-validation-for="Input.ConfirmPgpPublicKey" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
